@@ -5,7 +5,7 @@ Sepron is a responsive landing page built using **HTML, CSS, JavaScript, and Boo
 ## Features
 
 - Fully responsive design  
-- Interactive UI with smooth animations  
+- Interactive UI with smooth effects  
 - Bootstrap framework for a modern layout  
 - Organized and structured codebase  
 
@@ -14,5 +14,8 @@ Sepron is a responsive landing page built using **HTML, CSS, JavaScript, and Boo
 - **HTML5** – Structuring the webpage  
 - **CSS3** – Styling and layout  
 - **JavaScript** – Enhancing interactivity  
-- **Bootstrap** – Responsive design framework  
+- **Bootstrap** – Responsive design framework
+
+## Live Preview:
+https://gariiiiii.github.io/sepron/
 
