@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sepron</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <!-- Header Section -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="#">Sepron<span>.</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title fw-bold fs-4" id="offcanvasNavbarLabel">Sepron <span>.</span></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav mx-auto text-center">
+                        <li class="nav-item"><a class="nav-link fw-normal mx-2" href="#">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link fw-normal mx-2" href="#about">ABOUT US</a></li>
+                        <li class="nav-item"><a class="nav-link fw-normal mx-2" href="#features">FEATURES</a></li>
+                    </ul>
+                    <div class="icons text-center mt-2 mt-lg-0">
+                        <i class="fa-solid fa-magnifying-glass p-2 mx-2"></i>
+                        <i class="fa-solid fa-cart-shopping p-2 mx-2"></i>
+                        <a href="#" id="userIcon">
+                            <i class="fa-solid fa-user p-2 mx-2 user-icon"></i>
+                        </a>                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bootstrap Modal for Login/Signup -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <!-- Your login/signup container remains exactly the same -->
+                <div class="modal-container" id="container">
+                    <div class="form-container sign-up-container">
+                        <form action="#">
+                            <h1>Create Account</h1>
+                            <div class="social-container">
+                                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                            <span>or use your email for registration</span>
+                            <input type="text" placeholder="Name" />
+                            <input type="email" placeholder="Email" />
+                            <input type="password" placeholder="Password" />
+                            <button>Sign Up</button>
+                        </form>
+                    </div>
+
+                    <div class="form-container sign-in-container">
+                        <form action="#">
+                            <h1>Sign in</h1>
+                            <div class="social-container">
+                                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                            <span>or use your account</span>
+                            <input type="email" placeholder="Email" />
+                            <input type="password" placeholder="Password" />
+                            <a href="#">Forgot your password?</a>
+                            <button>Sign In</button>
+                        </form>
+                    </div>
+        
+                    <div class="overlay-container">
+                        <div class="overlay">
+                            <div class="overlay-panel overlay-left">
+                                <h1>Welcome Back!</h1>
+                                <p>To keep connected with us please login with your personal info</p>
+                                <button class="ghost" id="signIn">Sign In</button>
+                            </div>
+                            <div class="overlay-panel overlay-right">
+                                <h1>Hello, Friend!</h1>
+                                <p>Enter your personal details and start journey with us</p>
+                                <button class="ghost" id="signUp">Sign Up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section container py-4">
+        <div class="row align-items-center">
+            <!-- Left Column: Vertical Text & Bottle -->
+            <div class="col-lg-6 position-relative mb-4 mb-lg-0 d-flex justify-content-end align-items-center">
+                <!-- Vertical Text -->
+                <div class="vertical-text">
+                    <span>healthy</span>
+                    <span>100% natural</span>
+                    <span>no side effects</span>
+                </div>
+                <img src="img/serumBottle.png" alt="Glowing Serum" class="img-fluid serum-image"/>
+            </div>
+
+            <!-- Right Column: Text & Buttons -->
+            <div class="col-lg-6">
+                <div class="text-container m-4">
+                    <h1 class="display-4 fw-bold p-2 p-md-4 mb-0">Glowing Serum</h1>
+                    <p class="p-2 p-md-4 pt-0 pt-md-0">
+                        Our sepron serum is designed to rejuvenate your skin with a potent blend of
+                        natural ingredients and cutting-edge science. It deeply hydrates, reduces
+                        fine lines, and boosts radiance for a youthful glow.
+                    </p>
+                    <div class="p-2 p-md-4 btn-container pt-md-0">
+                        <a href="#" class="btn btn-dark btn-lg">Buy Now <span class="mx-1">|</span> $59.50</a>
+                        <a href="#" class="ms-3 text-decoration-line text-muted">Follow Instagram</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scrolling Ticker -->
+    <div class="ticker-wrapper">
+        <div class="ticker-content">
+            <span>Sign Up To Get 10% Off</span>
+            <span>Sign Up To Get 10% Off</span>
+            <span>Sign Up To Get 10% Off</span>
+            <span>Sign Up To Get 10% Off</span>
+            <span>Sign Up To Get 10% Off</span>
+        </div>
+    </div>
+
+    <!-- Benefits section -->
+    <section class="benefits container text-center my-3 py-5">
+        <h1 class="fw-bold mb-5">OUR BENEFITS</h1>
+        <div class="row d-flex align-items-stretch m-3">
+            <div class="col-md-4 p-2">
+                <div class="benefit-card p-4 h-100">
+                    <div class="benefit-icon">
+                        <i class="fa-solid fa-prescription-bottle"></i>
+                    </div>
+                    <h4>Best Product</h4>
+                    <p>Our serum is crafted with the highest quality ingredients and backed by cutting-edge science.</p>
+                </div>
+            </div>
+            <div class="col-md-4 p-2">
+                <div class="benefit-card p-4 h-100">
+                    <div class="benefit-icon">
+                        <svg width="202px" height="202px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#5c656a"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M3 3C1.34315 3 0 4.34315 0 6V15C0 16.3121 0.842366 17.4275 2.01581 17.8348C2.18436 19.6108 3.67994 21 5.5 21C7.26324 21 8.72194 19.6961 8.96456 18H15.0354C15.2781 19.6961 16.7368 21 18.5 21C20.3201 21 21.8156 19.6108 21.9842 17.8348C23.1576 17.4275 24 16.3121 24 15V10.7515C24 10.0248 23.7362 9.32283 23.2577 8.77596L20.8502 6.02449C20.2805 5.37344 19.4576 5 18.5925 5H16.8293C16.4175 3.83481 15.3062 3 14 3H3ZM4 17.4361V17.5639C4.03348 18.3634 4.69224 19.0013 5.5 19.0013C6.30776 19.0013 6.96652 18.3634 7 17.5639V17.4361C6.96652 16.6366 6.30776 15.9987 5.5 15.9987C4.69224 15.9987 4.03348 16.6366 4 17.4361ZM5.5 14C6.8962 14 8.10145 14.8175 8.66318 16H15.3368C15.8985 14.8175 17.1038 14 18.5 14C19.8245 14 20.9771 14.7357 21.5716 15.8207C21.8306 15.64 22 15.3398 22 15V11H17C15.8954 11 15 10.1046 15 9V6C15 5.44772 14.5523 5 14 5H3C2.44772 5 2 5.44772 2 6V15C2 15.3398 2.16945 15.64 2.42845 15.8207C3.02292 14.7357 4.17555 14 5.5 14ZM17 7V8C17 8.55229 17.4477 9 18 9H20.7962L19.345 7.34149C19.1552 7.12448 18.8808 7 18.5925 7H17ZM17 17.4361V17.5639C17.0335 18.3634 17.6922 19.0013 18.5 19.0013C19.3078 19.0013 19.9665 18.3634 20 17.5639V17.4361C19.9665 16.6366 19.3078 15.9987 18.5 15.9987C17.6922 15.9987 17.0335 16.6366 17 17.4361Z" fill="#5c656a"></path> </g></svg>                    </div>
+                    <h4>Free Shipping</h4>
+                    <p>Enjoy the convenience of free shipping on all orders, no matter the size or destination.</p>
+                </div>
+            </div>
+            <div class="col-md-4 p-2">
+                <div class="benefit-card p-4 h-100">
+                    <div class="benefit-icon">
+                        <svg fill="#5c656a" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M228.749,100.04687c-3.51562-3.666-7.15136-7.457-8.33789-10.32421-1.06152-2.56739-1.1416-7.82911-1.21191-12.47071-.15039-9.998-.33887-22.44043-9.17481-31.27636s-21.27832-9.02442-31.27636-9.17481c-4.6416-.07031-9.90332-.15039-12.47071-1.21191-2.86718-1.18653-6.6582-4.82227-10.32324-8.33789C148.86816,20.45605,140.05078,12,128,12c-12.0498,0-20.86816,8.45605-27.95312,15.251-3.666,3.51562-7.457,7.15136-10.32422,8.33789-2.56739,1.06152-7.82911,1.1416-12.47071,1.21191-9.998.15039-22.44043.33887-31.27636,9.17481s-9.02442,21.27832-9.17481,31.27636c-.07031,4.6416-.15039,9.90332-1.21191,12.47071-1.18653,2.86718-4.82227,6.6582-8.33789,10.32324C20.45605,107.13184,12,115.94922,12,128c0,12.0498,8.45605,20.86816,15.251,27.95312,3.51562,3.666,7.15136,7.457,8.33789,10.32422,1.06152,2.56739,1.1416,7.82911,1.21191,12.47071.15039,9.998.33887,22.44043,9.17481,31.27636s21.27832,9.02442,31.27636,9.17481c4.6416.07031,9.90332.15039,12.47071,1.21191,2.86718,1.18653,6.6582,4.82227,10.32324,8.33789C107.13184,235.544,115.94922,244,128,244c12.0498,0,20.86816-8.45605,27.95313-15.251,3.666-3.51562,7.457-7.15136,10.32421-8.33789,2.56739-1.06152,7.82911-1.1416,12.47071-1.21191,9.998-.15039,22.44043-.33887,31.27636-9.17481s9.02442-21.27832,9.17481-31.27636c.07031-4.6416.15039-9.90332,1.21191-12.47071,1.18653-2.86718,4.82227-6.6582,8.33789-10.32324C235.544,148.86816,244,140.05078,244,128,244,115.9502,235.544,107.13184,228.749,100.04687ZM211.42676,139.3418c-4.81738,5.02343-10.27832,10.71777-13.19141,17.75976-2.81445,6.80078-2.92578,14.16309-3.0332,21.28418-.08106,5.36426-.19141,12.71192-2.14844,14.668-1.95605,1.957-9.30371,2.06738-14.668,2.14844-7.12109.10742-14.4834.21875-21.28418,3.0332-7.042,2.91309-12.73633,8.374-17.75976,13.19141C135.78125,214.84082,130.40234,220,128,220s-7.78223-5.15918-11.3418-8.57324c-5.02343-4.81739-10.71777-10.27832-17.75976-13.19141-6.80078-2.81445-14.16309-2.92578-21.28418-3.0332-5.36426-.08106-12.71192-.19141-14.668-2.14844-1.957-1.95605-2.06738-9.30371-2.14844-14.668-.10742-7.12109-.21875-14.4834-3.0332-21.28418-2.91309-7.042-8.374-12.73633-13.19141-17.75976C41.15918,135.78125,36,130.40234,36,128s5.15918-7.78223,8.57324-11.3418c4.81739-5.02343,10.27832-10.71777,13.19141-17.75976,2.81445-6.80078,2.92578-14.16309,3.0332-21.28418.08106-5.36426.19141-12.71192,2.14844-14.668,1.956-1.957,9.30371-2.06738,14.668-2.14844,7.12109-.10742,14.4834-.21875,21.28418-3.0332,7.042-2.91309,12.73633-8.374,17.75976-13.19141C120.21875,41.15918,125.59766,36,128,36s7.78223,5.15918,11.3418,8.57324c5.02343,4.81738,10.71777,10.27832,17.75976,13.19141,6.80078,2.81445,14.16309,2.92578,21.28418,3.0332,5.36426.08106,12.71192.19141,14.668,2.14844,1.957,1.956,2.06738,9.30371,2.14844,14.668.10742,7.12109.21875,14.4834,3.0332,21.28418,2.91309,7.042,8.374,12.73633,13.19141,17.75976C214.84082,120.21875,220,125.59766,220,128S214.84082,135.78223,211.42676,139.3418Zm-30.7461-43.62793a12.0018,12.0018,0,0,1-.39453,16.96679l-58.667,56a12.00208,12.00208,0,0,1-16.57226,0l-29.333-28a12.00058,12.00058,0,0,1,16.57226-17.36132L113.333,143.41016l50.38086-48.09082A12.00355,12.00355,0,0,1,180.68066,95.71387Z"></path> </g></svg>
+                    </div>
+                    <h4>Guarantee</h4>
+                    <p>You will be completely happy with your purchase; we offer a 100% satisfaction guarantee.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About section -->
+    <section class="container about-section position-relative py-md-5 pt-0 mb-3" id="about">
+        <div class="row align-items-center">
+            <div class="circle-svg">
+                <svg viewBox="-4.8 -4.8 57.60 57.60" id="a" xmlns="http://www.w3.org/2000/svg" fill="#DCDCDC" transform="matrix(-1, 0, 0, 1, 0, 0)rotate(90)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="1.536"></g><g id="SVGRepo_iconCarrier"><defs><style>.f{fill:none;stroke:#DCDCDC;stroke-linecap:round;stroke-linejoin:round;}</style></defs><circle id="b" class="f" cx="24" cy="24" r="8.5"></circle><circle id="c" class="f" cx="24" cy="24" r="11.8"></circle><circle id="d" class="f" cx="24" cy="24" r="18.25"></circle><circle id="e" class="f" cx="24" cy="24" r="21.5"></circle></g></svg>
+            </div>
+          <!-- Left Column: Text Content -->
+            <div class="col-md-6 mb-md-0 py-4 px-md-5 px-4 position-relative about-left">
+                <h2 class="fw-bold mb-2">About Us</h2>
+                <p>
+                    Our sepron serum is crafted with the highest quality
+                    natural ingredients that work &amp; transform your skin.
+                </p>
+                <ul class="about-list list-unstyled mt-3">
+                    <li class="d-flex align-items-center mb-3">
+                        <div class="icon-container">
+                            <svg fill="#64676A" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#64676A"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>acid</title> <path d="M12.25 12.25c0.937 0 1.875 0.937 3.75 0.937s2.813-0.937 3.75-0.937c2.813 0 0.937 1.875 0 2.813 0 9.375 7.5 14.063 7.5 15.937h-22.5c0-1.875 7.5-6.562 7.5-15.937-0.938-0.937-2.813-2.813-0.001-2.813zM16.938 11.313c0 0.518-0.42 0.937-0.937 0.937s-0.937-0.42-0.937-0.937 0.42-0.937 0.937-0.937c0.517-0.001 0.937 0.42 0.937 0.937zM17.875 2.875c0 1.035-0.839 1.875-1.875 1.875s-1.875-0.839-1.875-1.875c0-1.035 0.839-1.875 1.875-1.875s1.875 0.84 1.875 1.875zM15.062 7.563c0 1.035-0.839 1.875-1.875 1.875s-1.875-0.839-1.875-1.875c0-1.035 0.839-1.875 1.875-1.875s1.875 0.839 1.875 1.875zM18.812 8.5c0 0.518-0.42 0.937-0.937 0.937s-0.937-0.42-0.937-0.937 0.42-0.937 0.937-0.937 0.937 0.42 0.937 0.937z"></path> </g></svg>                        </div>
+                        <div class="text-content">
+                            <strong>Hyaluronic Acid</strong>
+                            <p>boosts hydration and plumps the skin</p>
+                        </div>
+                    </li>
+                    <li class="d-flex align-items-center mb-3">
+                        <div class="icon-container">
+                            <i class="fas fa-capsules"></i>
+                        </div>
+                        <div class="text-content">
+                            <strong>Vitamin C</strong>
+                            <p>brightens and evens out skin tone</p>
+                        </div>
+                    </li>
+                    <li class="d-flex align-items-center mb-3">
+                        <div class="icon-container">
+                            <svg height="64px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#64676A;" d="M256,4.267c-9.97,55.101-55.226,176.557-82.942,280.574v184.681L256,507.258l82.942-37.736V284.841 C311.226,180.823,265.97,59.367,256,4.267z"></path> <g> <path style="fill:#64676A;" d="M151.241,59.93c21.848,46.417,2.71,69.064-18.861,184.68c-7.621,40.847-7.133,77.791-0.594,110.345 L256,507.247c0-107.676-57.513-164.879-68.692-265.213C174.286,125.145,185.729,97.91,151.241,59.93z"></path> <path style="fill:#64676A;" d="M379.619,244.609c-21.57-115.615-40.708-138.263-18.861-184.68 c-34.486,37.98-23.044,65.215-36.066,182.102C313.514,342.366,256,399.568,256,507.245l124.214-152.292 C386.751,322.399,387.24,285.456,379.619,244.609z"></path> </g> <g> <path style="fill:#64676A;" d="M0,172.266c43.181,18.801,43.866,45.911,98.81,138.856 c47.165,79.782,152.541,133.041,157.44,196.137c-78.883,6.123-171.672-46.694-202.45-173.283 C28.292,229.062,35.78,202.89,0,172.266"></path> <path style="fill:#64676A;" d="M512,172.266c-43.181,18.801-43.866,45.911-98.812,138.856 c-47.165,79.782-152.541,133.041-157.44,196.137c78.883,6.123,171.673-46.694,202.45-173.283 C483.708,229.062,476.22,202.89,512,172.266"></path> </g> </g></svg>                        </div>
+                        <div class="text-content">
+                            <strong>Aloe Vera</strong>
+                            <p>soothes and calms irritated skin</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+    
+          <!-- Right Column: Images -->
+          <div class="col-md-6 about-image">
+            <div class="background-layer"></div> <!-- Light Grey Background -->
+            <div class="transparent-card"></div>  <!-- Transparent Card with Border -->
+          
+            <div class="bottle-wrapper">
+              <img src="img/about.png" >
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- features section -->
+    <section class="features-section my-4" id="features">
+        <div class="container features-container">
+            <!-- Vertical Text on the Left -->
+            <div class="vertical-feature-text">Features</div>
+                <div class="image-container">
+                    <img src="img/feature.png" alt="Ellipse with Bottle" class="ellipse-image" />
+                    
+                    <!-- Feature Labels (positioned around the image) -->
+                    <div class="feature-label label-top">Brightening</div>
+                    <div class="feature-label label-right-top">Soothing</div>
+                    <div class="feature-label label-right-bottom">Deep Hydration</div>
+                    <div class="feature-label label-bottom-left">Anti-Aging</div>
+    
+                <!-- Circular Text for Discount -->
+                <div class="outer-border-circle">
+                    <div class="circle-text">
+                        <svg viewBox="0 0 200 200">
+                            <defs>
+                                <!-- Circle path with radius ~75 so text fits nicely -->
+                                <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0" />
+                            </defs>
+                            <text>
+                                <textPath xlink:href="#circlePath" startOffset="50%" text-anchor="middle"> SIGN UP TO 10% BIGGEST DISCOUNTS </textPath>
+                            </text>
+                            <circle class="center-circle" cx="100" cy="100" r="48" fill="#F5F5F5" stroke="#858181" stroke-width="1"></circle>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special offer section -->
+    <section class="container offer-section my-2">
+        <div class="row align-items-center">
+            <!-- Left Column: Product Image(s) -->
+            <div class="col-md-6 position-relative mb-4 mb-md-0 img-container">
+                <!-- Shapes behind the image -->
+                <div class="shape-box"></div>
+                <div class="shape-box2"></div>
+            
+                <!-- Product image container -->
+                <div class="product-img-container">
+                    <img src="img/sploffer.png" alt="Serum Bottle" class="img-fluid mb-3">
+                </div>
+            </div>
+            
+          
+            <!-- Right Column: Text Content -->
+            <div class="col-md-6 text-left position-relative mb-4 mb-md-0">
+                <h2 class="offer-heading">Special Limited Time Offer!</h2>
+                <p class="offer-subheading">Get 10% Off By Sign Up Account!</p>
+            
+                <!-- End time label -->
+                <div class="end-time-label"> <i class="fa-regular fa-clock"></i> End time</div>
+    
+                <!-- Countdown Timer -->
+                <div class="countdown" id="countdown">
+                    <div class="countdown-item">
+                    <span class="countdown-number" id="days"></span>
+                    <span class="countdown-label"></span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours"></span>
+                    <span class="countdown-label"></span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes"></span>
+                    <span class="countdown-label"></span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds"></span>
+                    <span class="countdown-label"></span>
+                </div>
+            </div>
+    
+            <div class="price-section d-flex align-items-center gap-3 mb-3">
+                <span class="current-price">$53.55</span>
+                <span class="old-price">$59.50</span>
+                <button class="order-btn">Order Now <i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        </div>
+
+        <div class="circleOffer-svg">
+            <svg viewBox="-4.8 -4.8 57.60 57.60" id="a" xmlns="http://www.w3.org/2000/svg" fill="#DCDCDC" transform="matrix(-1, 0, 0, 1, 0, 0)rotate(90)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="1.536"></g><g id="SVGRepo_iconCarrier"><defs><style>.f{fill:none;stroke:#DCDCDC;stroke-linecap:round;stroke-linejoin:round;}</style></defs><circle id="b" class="f" cx="24" cy="24" r="8.5"></circle><circle id="c" class="f" cx="24" cy="24" r="11.8"></circle><circle id="d" class="f" cx="24" cy="24" r="18.25"></circle><circle id="e" class="f" cx="24" cy="24" r="21.5"></circle></g></svg>
+        </div>
+    </section>
+
+    <!-- FAQ'SECTION -->
+    <section class="faq">
+        <div class="faq-section container">
+            <h1 class="text-center mb-4">FAQ</h1>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            How soon will I see results?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Many users see visible improvements within 2 weeks of consistent use.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Can I use this serum with other skincare products?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, it is safe to use with other skincare products.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Is the serum suitable for all skin types?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, it is formulated for all skin types.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            How often should I use this serum?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            For best results, use the serum once or twice daily, as recommended in the product instructions.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Can I apply makeup after using the serum?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, allow the serum to fully absorb into your skin before applying makeup for best results.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            Does this serum contain any harmful chemicals?
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            No, this serum is free from parabens, sulfates, and other harmful chemicals. It is dermatologically tested and safe for all skin types.
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscribe section -->
+    <section class="container mb-5 subscribe-section">
+        <div class="d-flex justify-content-center">
+            <div class="row row-container">
+                <div class="col-md-6 col-6 newsletter-text">
+                    <h2>Stay Updated</h2>
+                    <p>Sign up for our newsletter to receive exclusive deals, skincare tips, and updates on new products.</p>
+                    <div class="newsletter-input">
+                        <input type="email" id="emailInput" placeholder="Enter your email" oninput="validateEmail()">
+                        <button onclick="subscribe()">Subscribe</button>
+                    </div>
+                    <span id="error-message" class="badge bg-danger mt-2 d-none">Please enter a valid email.</span>
+                </div>
+                <div class="col-md-6 col-6 product-image">
+                    <img src="img/subscribe.png" alt="Product Image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section -->
+    <footer>
+        <div class="container row mx-md-5">
+            <div class="col-12 social-section">
+                <a class="navbar-brand fw-bold" href="#">Sepron<span>.</span></a>
+                <div class="social-links d-flex justify-content-center align-items-center">
+                    <i class="fa-brands fa-instagram mx-2"></i>
+                    <i class="fa-brands fa-pinterest-p mx-2"></i>                    
+                    <i class="fa-brands fa-facebook-f mx-2"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 copyright-section">
+            <div>Made by Garima Rawat</div>
+            <div>Copyright &copy; 2025 Sepron.com. All Rights Reserved.</div>
+        </div>
+
+    </footer>
+
+
+
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
